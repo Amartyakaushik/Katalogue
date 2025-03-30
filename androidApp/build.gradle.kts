@@ -58,6 +58,11 @@ dependencies {
 //
 //    // ViewModel for Compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+
+    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
+    implementation("io.coil-kt:coil-compose:2.1.0")
+    implementation("com.google.accompanist:accompanist-pager:0.24.13-rc")
 }
 //kapt {
 //    correctErrorTypes = true

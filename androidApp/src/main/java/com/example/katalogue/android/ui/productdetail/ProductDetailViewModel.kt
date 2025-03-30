@@ -1,5 +1,6 @@
 package com.example.katalogue.android.ui.productdetail
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.katalogue.dataLayer.model.Product
@@ -20,7 +21,12 @@ class ProductDetailViewModel @Inject constructor(
 
     fun getProductDetail(productId: Int) {
         viewModelScope.launch {
-            _product.value = getProductDetailsUseCase(productId)
+            try {
+                _product.value = getProductDetailsUseCase(productId)
+            } catch (e: Exception) {
+                // Handle error
+                Log.e("ProductDetailViewModel", "Error fetching product details", e)
+            }
         }
     }
 }

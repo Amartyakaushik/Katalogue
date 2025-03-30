@@ -41,6 +41,9 @@ kotlin {
 //            implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
+//            implementation("io.coil-kt.coil3:coil-compose:3.1.0")
+//            implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
+//            implementation("com.google.accompanist:accompanist-pager:0.24.13-rc")
 
         }
         val androidMain by getting {
@@ -48,6 +51,10 @@ kotlin {
                 implementation(libs.ktor.client.okhttp)
                 implementation(libs.kotlinx.coroutines.android)
                 implementation("javax.inject:javax.inject:1")
+                implementation("io.coil-kt:coil-compose:2.1.0")
+                implementation("io.coil-kt.coil3:coil-compose:3.1.0")
+                implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
+                implementation("com.google.accompanist:accompanist-pager:0.24.13-rc")
             }
         }
         val iosMain by creating {

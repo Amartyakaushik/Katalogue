@@ -11,5 +11,3 @@ class GetProductsUseCase @Inject constructor(
         return repository.fetchProducts()
     }
 }
-
-//annotation class Inject
